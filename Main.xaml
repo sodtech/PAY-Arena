@@ -105,7 +105,6 @@
     </sap:WorkflowViewStateService.ViewState>
     <TryCatch DisplayName="Try Run PAYArena Bot" sap:VirtualizedContainerService.HintSize="752,863" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
-        <Variable x:TypeArguments="x:String" Name="reportDate1" />
         <Variable x:TypeArguments="s:DateTime" Name="ReportDate" />
       </TryCatch.Variables>
       <sap:WorkflowViewStateService.ViewState>
@@ -628,7 +627,7 @@
                       <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">UploadFilePath</mca:CSharpValue>
                     </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_PayArenaDate">
-                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_195">reportDate1</mca:CSharpValue>
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_310">ReportDate.ToString("dd_MM_yyyy")</mca:CSharpValue>
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
@@ -659,7 +658,7 @@
                       <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">UploadFilePath</mca:CSharpValue>
                     </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_PayArenaDate">
-                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_194">reportDate1</mca:CSharpValue>
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_311">ReportDate.ToString("dd_MM_yyyy")</mca:CSharpValue>
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
@@ -885,7 +884,7 @@
                     <av:PointCollection x:Key="ConnectorLocation">530,505.5 530,535.5 170.666666666667,535.5 170.666666666667,513.666666666667</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PAYArena_Upload_File workflow" sap:VirtualizedContainerService.HintSize="374,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="PAYArena_Settlement\\PAYArena_Upload_File.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PAYArena_Upload_File workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="PAYArena_Settlement\\PAYArena_Upload_File.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
                       <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_258">Config</mca:CSharpValue>
@@ -1079,10 +1078,10 @@
                     <InArgument x:TypeArguments="x:Double" x:Key="in_verveDRBillPYMTExtraVat">
                       <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_196">verveDRBillPYMTExtraVat</mca:CSharpValue>
                     </InArgument>
-                    <InArgument x:TypeArguments="s:DateTime" x:Key="in_ReportDate">
-                      <mca:CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_306">ReportDate</mca:CSharpValue>
-                    </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="In_NeftReportFilePath" />
+                    <InArgument x:TypeArguments="x:String" x:Key="in_ReportDate">
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_313">ReportDate.ToString("dd MM yyyy")</mca:CSharpValue>
+                    </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
