@@ -1,0 +1,20 @@
+Process Name:  Visa Pay Arena process
+Department:    Electronic Product OperationsDear Team
+
+Dear Team,
+
+While attempting to run PayArena Settlement process, I encountered the following error:
+
+ExceptionMessage
+
+See attached for more information
+Kindly retry or forward this to PayArena Bot Support Desk. Thank you.
+
+Regards,
+
+Best Regards
+
+FirstRobotics
+FirstBank of Nigeria
+35 Marina street, Lagos
+Please note that this is an RPA generated email, do not reply to it. For processing and scheduling enquiries please contact botcontrollers@firstbanknigeria.com. For other enquiries, please contact firstrobotics@firstbanknigeria.com.

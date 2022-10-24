@@ -1,0 +1,303 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Dowload_Report_FTP" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Selector" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="out_FileDownloaded" Type="OutArgument(si:FileInfo)" />
+    <x:Property Name="out_HasFileDownloaded" Type="OutArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>671,1578</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="34">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="39">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Dowload_Report_FTP" sap:VirtualizedContainerService.HintSize="594,1513" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="FtpUrl" />
+      <Variable x:TypeArguments="x:String" Name="DownloadFolder" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="552,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">FtpUrl</mca:CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">in_Config["RobotFTPURL"].ToString()</mca:CSharpValue>
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">DownloadFolder</mca:CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">in_Config["DownloadFolderPath"].ToString()</mca:CSharpValue>
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <Sequence DisplayName="Download Report Sequence" sap:VirtualizedContainerService.HintSize="552,1250" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Wing FTP Server - Web Client" sap:VirtualizedContainerService.HintSize="510,693" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="7d266ad7-6da5-47f5-a307-676dc071f9d5" Version="V1">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,477" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <ui:GetLastDownloadedFile DisplayName="Wait for Download" sap:VirtualizedContainerService.HintSize="434,321" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_3" IgnoreFiles="tmp,crdownload" Timeout="600">
+                <ui:GetLastDownloadedFile.Body>
+                  <ActivityAction>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="selector" />
+                        <Variable x:TypeArguments="x:String" Name="SelectorDate" />
+                        <Variable x:TypeArguments="x:Boolean" Name="SaveScreenExist" />
+                        <Variable x:TypeArguments="x:String" Name="in_FileExtension" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ClickType="Double" DisplayName="Click Report File" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d266ad7-6da5-47f5-a307-676dc071f9d5" Timeout="5" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://fileserver.up-ng.com/main.html" DesignTimeRectangle="26, 321, 500, 38" DesignTimeScaleFactor="1" FriendlyName="'TRANS 23'" Guid="07e10b4a-01d7-4d5e-858e-e568e5fcc274" ImageBase64="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" InformativeScreenshot="9c49b041c87181af28a04084ef7e77f6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wing FTP Server - Web Client' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+                            <uix:TargetAnchorable.FullSelectorArgument>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36" xml:space="preserve">"&lt;webctrl id='listtable' tableRow='*' tag='TABLE' /&gt;&lt;webctrl tag='TD' aaname='  "+in_Selector+"' class='paddingtd' parentid='maintable' /&gt;"</mca:CSharpValue>
+                              </InArgument>
+                            </uix:TargetAnchorable.FullSelectorArgument>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NClick>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke HandleSaveAsPopUp workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="FTP_Server_Portal\\HandleSaveAsPopUp.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_FtpURL">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">FtpUrl</mca:CSharpValue>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_DownloadFolder">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">DownloadFolder</mca:CSharpValue>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_FileExtension">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">in_FileExtension</mca:CSharpValue>
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:GetLastDownloadedFile.Body>
+                <ui:GetLastDownloadedFile.DownloadFolder>
+                  <InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">DownloadFolder</mca:CSharpValue>
+                  </InArgument>
+                </ui:GetLastDownloadedFile.DownloadFolder>
+                <ui:GetLastDownloadedFile.File>
+                  <OutArgument x:TypeArguments="si:FileInfo">
+                    <mca:CSharpReference x:TypeArguments="si:FileInfo" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">out_FileDownloaded</mca:CSharpReference>
+                  </OutArgument>
+                </ui:GetLastDownloadedFile.File>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:GetLastDownloadedFile>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="78f733da6dacf315c100ec3344ffcd56.png" Selector="&lt;html app='chrome.exe' title='Wing FTP Server - Web Client'/&gt;">
+            <uix:TargetApp.Url>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">FtpUrl</mca:CSharpValue>
+              </InArgument>
+            </uix:TargetApp.Url>
+          </uix:TargetApp>
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <Sequence sap:VirtualizedContainerService.HintSize="510,425" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+          <ui:LogMessage.Message>
+            <InArgument x:TypeArguments="x:Object">
+              <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">"DOWNLOAD FILE: "+out_FileDownloaded.FullName</mca:CSharpValue>
+            </InArgument>
+          </ui:LogMessage.Message>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:LogMessage>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+          <ui:LogMessage.Message>
+            <InArgument x:TypeArguments="x:Object">
+              <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">"FILE EXTENSION: "+out_FileDownloaded.Extension</mca:CSharpValue>
+            </InArgument>
+          </ui:LogMessage.Message>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:LogMessage>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+          <ui:LogMessage.Message>
+            <InArgument x:TypeArguments="x:Object">
+              <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">"Report has been Downloaded: PROCEED"</mca:CSharpValue>
+            </InArgument>
+          </ui:LogMessage.Message>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:LogMessage>
+        <Assign DisplayName="Assign out_HasFileDownloaded" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">out_HasFileDownloaded</mca:CSharpReference>
+            </OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">YES</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
+    </Sequence>
+  </Sequence>
+</Activity>
