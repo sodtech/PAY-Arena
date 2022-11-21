@@ -52,7 +52,7 @@
     <InArgument x:TypeArguments="x:String" />
   </this:Copy_Report_To_Processing.in_summarySheet>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>671,635</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>675,515</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -121,7 +121,7 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Write all sheet to processing" sap:VirtualizedContainerService.HintSize="476,570" sap2010:WorkflowViewState.IdRef="Sequence_32">
+  <Sequence DisplayName="Write all sheet to processing" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_32">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="visaDRDT" />
       <Variable x:TypeArguments="sd:DataTable" Name="verveDRDT" />
@@ -135,24 +135,25 @@
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do Read All Sheet" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_29">
+          <Sequence DisplayName="Do Read All Sheet" sap:VirtualizedContainerService.HintSize="376,1785" sap2010:WorkflowViewState.IdRef="Sequence_29">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+            <ui:Comment sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Add New Sheet here." />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_196">"Read Verve DR sheet"</mca:CSharpValue>
@@ -165,7 +166,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range verveDRTSheet" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2">
+            <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range verveDRTSheet" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2">
               <ui:ExcelReadRange.DataTable>
                 <OutArgument x:TypeArguments="sd:DataTable">
                   <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_107">verveDRDT</mca:CSharpReference>
@@ -188,7 +189,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExcelReadRange>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_198">"Read Visa DR sheet"</mca:CSharpValue>
@@ -201,7 +202,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range visaDRSheet" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3">
+            <ui:ExcelReadRange AddHeaders="True" DisplayName="Read Range visaDRSheet" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3">
               <ui:ExcelReadRange.DataTable>
                 <OutArgument x:TypeArguments="sd:DataTable">
                   <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_108">visaDRDT</mca:CSharpReference>
@@ -481,7 +482,7 @@
       </ui:ExcelApplicationScope.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -491,143 +492,7 @@
         </InArgument>
       </ui:ExcelApplicationScope.WorkbookPath>
     </ui:ExcelApplicationScope>
-    <Sequence DisplayName="Code to add column" sap:VirtualizedContainerService.HintSize="434,66" sap2010:WorkflowViewState.IdRef="Sequence_30">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_DT.Columns.Add(&quot;ACTUAL AMOUNT SETTLED&quot;).SetOrdinal(33);&#xA;in_DT.Columns.Add(&quot;NEW FEE&quot;).SetOrdinal(34);&#xA;in_DT.Columns.Add(&quot;VAT&quot;).SetOrdinal(35);&#xA;in_DT.Columns.Add(&quot;EXTRA VAT&quot;).SetOrdinal(36);&#xA;out_DT = in_DT;" DisplayName="Code to add four column to the DT" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
-        <ui:InvokeCode.Arguments>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">
-            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_215">visaDRDT</mca:CSharpValue>
-          </InArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DT">
-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_116">visaDRDT</mca:CSharpReference>
-          </OutArgument>
-        </ui:InvokeCode.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeCode>
-      <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_DT.Columns.Add(&quot;ACTUAL AMOUNT SETTLED&quot;).SetOrdinal(33);&#xA;in_DT.Columns.Add(&quot;NEW FEE&quot;).SetOrdinal(34);&#xA;in_DT.Columns.Add(&quot;VAT&quot;).SetOrdinal(35);&#xA;in_DT.Columns.Add(&quot;EXTRA VAT&quot;).SetOrdinal(36);&#xA;out_DT = in_DT;" DisplayName="Code to add four column to the DT" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_4" Language="CSharp">
-        <ui:InvokeCode.Arguments>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">
-            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_216">visaCRDT</mca:CSharpValue>
-          </InArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DT">
-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_117">visaCRDT</mca:CSharpReference>
-          </OutArgument>
-        </ui:InvokeCode.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeCode>
-      <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_DT.Columns.Add(&quot;ACTUAL AMOUNT SETTLED&quot;).SetOrdinal(33);&#xA;in_DT.Columns.Add(&quot;NEW FEE&quot;).SetOrdinal(34);&#xA;in_DT.Columns.Add(&quot;VAT&quot;).SetOrdinal(35);&#xA;in_DT.Columns.Add(&quot;EXTRA VAT&quot;).SetOrdinal(36);&#xA;out_DT = in_DT;" DisplayName="Code to add four column to the DT" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_5" Language="CSharp">
-        <ui:InvokeCode.Arguments>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">
-            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_217">verveDRDT</mca:CSharpValue>
-          </InArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DT">
-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_118">verveDRDT</mca:CSharpReference>
-          </OutArgument>
-        </ui:InvokeCode.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeCode>
-      <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_DT.Columns.Add(&quot;ACTUAL AMOUNT SETTLED&quot;).SetOrdinal(33);&#xA;in_DT.Columns.Add(&quot;NEW FEE&quot;).SetOrdinal(34);&#xA;in_DT.Columns.Add(&quot;VAT&quot;).SetOrdinal(35);&#xA;in_DT.Columns.Add(&quot;EXTRA VAT&quot;).SetOrdinal(36);&#xA;out_DT = in_DT;" DisplayName="Code to add four column to the DT" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_6" Language="CSharp">
-        <ui:InvokeCode.Arguments>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">
-            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_218">verveCRDT</mca:CSharpValue>
-          </InArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DT">
-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_119">verveCRDT</mca:CSharpReference>
-          </OutArgument>
-        </ui:InvokeCode.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeCode>
-      <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_DT.Columns.Add(&quot;ACTUAL AMOUNT SETTLED&quot;).SetOrdinal(33);&#xA;in_DT.Columns.Add(&quot;NEW FEE&quot;).SetOrdinal(34);&#xA;in_DT.Columns.Add(&quot;VAT&quot;).SetOrdinal(35);&#xA;in_DT.Columns.Add(&quot;EXTRA VAT&quot;).SetOrdinal(36);&#xA;out_DT = in_DT;" DisplayName="Code to add four column to the DT" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_7" Language="CSharp">
-        <ui:InvokeCode.Arguments>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">
-            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_219">mastercardDRDT</mca:CSharpValue>
-          </InArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DT">
-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_120">mastercardDRDT</mca:CSharpReference>
-          </OutArgument>
-        </ui:InvokeCode.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeCode>
-      <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_DT.Columns.Add(&quot;ACTUAL AMOUNT SETTLED&quot;).SetOrdinal(33);&#xA;in_DT.Columns.Add(&quot;NEW FEE&quot;).SetOrdinal(34);&#xA;in_DT.Columns.Add(&quot;VAT&quot;).SetOrdinal(35);&#xA;in_DT.Columns.Add(&quot;EXTRA VAT&quot;).SetOrdinal(36);&#xA;out_DT = in_DT;" DisplayName="Code to add four column to the DT" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_8" Language="CSharp">
-        <ui:InvokeCode.Arguments>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">
-            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_220">mastercardCRDT</mca:CSharpValue>
-          </InArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DT">
-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_121">mastercardCRDT</mca:CSharpReference>
-          </OutArgument>
-        </ui:InvokeCode.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeCode>
-      <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_DT.Columns.Add(&quot;ACTUAL AMOUNT SETTLED&quot;).SetOrdinal(33);&#xA;in_DT.Columns.Add(&quot;NEW FEE&quot;).SetOrdinal(34);&#xA;in_DT.Columns.Add(&quot;VAT&quot;).SetOrdinal(35);&#xA;out_DT = in_DT;" DisplayName="Code to add three column to the DT" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_9" Language="CSharp">
-        <ui:InvokeCode.Arguments>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">
-            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_221">payattitudeCRDT</mca:CSharpValue>
-          </InArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DT">
-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_122">payattitudeCRDT</mca:CSharpReference>
-          </OutArgument>
-        </ui:InvokeCode.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeCode>
-      <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_DT.Columns.Add(&quot;ACTUAL AMOUNT SETTLED&quot;).SetOrdinal(33);&#xA;in_DT.Columns.Add(&quot;NEW FEE&quot;).SetOrdinal(34);&#xA;in_DT.Columns.Add(&quot;VAT&quot;).SetOrdinal(35);&#xA;out_DT = in_DT;" DisplayName="Code to add three column to the DT" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_10" Language="CSharp">
-        <ui:InvokeCode.Arguments>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">
-            <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_222">payattitudeDRDT</mca:CSharpValue>
-          </InArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DT">
-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_123">payattitudeDRDT</mca:CSharpReference>
-          </OutArgument>
-        </ui:InvokeCode.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeCode>
-    </Sequence>
-    <Sequence DisplayName="Write DT to  Processing " sap:VirtualizedContainerService.HintSize="434,66" sap2010:WorkflowViewState.IdRef="Sequence_28">
+    <Sequence DisplayName="Write DT to  Processing " sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_28">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -842,7 +707,7 @@
         </ui:WriteRange.WorkbookPath>
       </ui:WriteRange>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_268" xml:space="preserve">"Done Writing all the  Sheet"</mca:CSharpValue>

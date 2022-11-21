@@ -89,6 +89,7 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Bot Hub" sap:VirtualizedContainerService.HintSize="794,955" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -153,15 +154,6 @@
             <Variable x:TypeArguments="x:Double" Name="summary" />
             <Variable x:TypeArguments="x:Double" Name="NMCCRIssuerFee" />
             <Variable x:TypeArguments="x:Double" Name="NMCCRIssuerVat" />
-            <Variable x:TypeArguments="x:Double" Name="payAttCR99999IssuerFee" />
-            <Variable x:TypeArguments="x:Double" Name="payAttCR99999IssuerVat" />
-            <Variable x:TypeArguments="x:Double" Name="payAttCR99999TranAmt" />
-            <Variable x:TypeArguments="x:Double" Name="payAttCR901102IssuerFee" />
-            <Variable x:TypeArguments="x:Double" Name="payAttCR901102IssuerVat" />
-            <Variable x:TypeArguments="x:Double" Name="payAttCR901102TranAmt" />
-            <Variable x:TypeArguments="x:Double" Name="payAttCR901105IssuerFee" />
-            <Variable x:TypeArguments="x:Double" Name="payAttCR901105IssuerVat" />
-            <Variable x:TypeArguments="x:Double" Name="payAttCR901105TranAmt" />
             <Variable x:TypeArguments="x:Double" Name="NMCDRBillPYMTIssuerFee" />
             <Variable x:TypeArguments="x:Double" Name="NMCDRBillPYMTIssuerVat" />
             <Variable x:TypeArguments="x:Double" Name="NMCDRBillPYMTActualAmt" />
@@ -178,6 +170,15 @@
             <Variable x:TypeArguments="x:Double" Name="verveDRBillPYMTNewFee" />
             <Variable x:TypeArguments="x:Double" Name="VerveDRBillPYMTVat" />
             <Variable x:TypeArguments="x:Double" Name="verveDRBillPYMTExtraVat" />
+            <Variable x:TypeArguments="x:Double" Name="PayattitudeCrIssueVat" />
+            <Variable x:TypeArguments="x:Double" Name="PayattitudeCrIssuerFee" />
+            <Variable x:TypeArguments="x:Double" Name="PayattitudeCrTransAmout" />
+            <Variable x:TypeArguments="x:Double" Name="PayattDR901105IssuerFee" />
+            <Variable x:TypeArguments="x:Double" Name="payattDR901105IssuerFee" />
+            <Variable x:TypeArguments="x:Double" Name="payattDR901105IssuerVat" />
+            <Variable x:TypeArguments="x:Double" Name="payAttDR901105TranAmt" />
+            <Variable x:TypeArguments="x:Double" Name="payAttDR901102IssuerFee" />
+            <Variable x:TypeArguments="x:Double" Name="payAttDR901102IssuerVat" />
           </Flowchart.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -199,17 +200,17 @@
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <av:Point x:Key="ShapeLocation">111.666666666667,426.666666666667</av:Point>
+                <av:Point x:Key="ShapeLocation">151.666666666667,416.666666666667</av:Point>
                 <av:Size x:Key="ShapeSize">118,87</av:Size>
-                <av:PointCollection x:Key="TrueConnector">111.666666666667,470.166666666667 100,470.166666666667 100,225.02</av:PointCollection>
-                <av:PointCollection x:Key="FalseConnector">228.666666666667,470.166666666667 270,470.166666666667 270,325.02</av:PointCollection>
+                <av:PointCollection x:Key="TrueConnector">151.666666666667,460.166666666667 100,460.166666666667 100,265.02</av:PointCollection>
+                <av:PointCollection x:Key="FalseConnector">269.666666666667,460.166666666667 300,460.166666666667 300,325.02</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <FlowDecision.True>
               <FlowStep x:Name="__ReferenceID0">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <av:Point x:Key="ShapeLocation">0,174.02</av:Point>
+                    <av:Point x:Key="ShapeLocation">0,214.02</av:Point>
                     <av:Size x:Key="ShapeSize">200,51</av:Size>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -240,7 +241,7 @@
               <FlowStep x:Name="__ReferenceID1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <av:Point x:Key="ShapeLocation">170,274.02</av:Point>
+                    <av:Point x:Key="ShapeLocation">200,274.02</av:Point>
                     <av:Size x:Key="ShapeSize">200,51</av:Size>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -301,9 +302,6 @@
                 <OutArgument x:TypeArguments="x:Double" x:Key="out_verveDRTransferIssuerVat">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_140">verveDRTransferIssuerVat</mca:CSharpReference>
                 </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_verveDRTransferNewFee">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_139">verveDRTransferNewFee</mca:CSharpReference>
-                </OutArgument>
                 <OutArgument x:TypeArguments="x:Double" x:Key="out_verveDRTransferVat">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_138">verveDRTransferVat</mca:CSharpReference>
                 </OutArgument>
@@ -312,9 +310,6 @@
                 </OutArgument>
                 <OutArgument x:TypeArguments="x:Double" x:Key="out_payattDR901105NewFee">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_136">payattDR901105NewFee</mca:CSharpReference>
-                </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_payattDR901105Vat">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_135">payattDR901105Vat</mca:CSharpReference>
                 </OutArgument>
                 <OutArgument x:TypeArguments="x:Double" x:Key="out_verveDRBillPYMTIssuerFee">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_134">verveDRBillPYMTIssuerFee</mca:CSharpReference>
@@ -343,9 +338,6 @@
                 <OutArgument x:TypeArguments="x:Double" x:Key="out_NMCDRTransferActualAmt">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_126">NMCDRTransferActualAmt</mca:CSharpReference>
                 </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_NMCDRTransferNewFee">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_125">NMCDRTransferNewFee</mca:CSharpReference>
-                </OutArgument>
                 <OutArgument x:TypeArguments="x:Double" x:Key="out_NMCDRTransferVat">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_124">NMCDRTransferVat</mca:CSharpReference>
                 </OutArgument>
@@ -367,9 +359,6 @@
                 <OutArgument x:TypeArguments="x:Double" x:Key="out_visaDRTransferActualAmt">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_118">visaDRTransferActualAmt</mca:CSharpReference>
                 </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_visaDRTransferNewFee">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_117">visaDRTransferNewFee</mca:CSharpReference>
-                </OutArgument>
                 <OutArgument x:TypeArguments="x:Double" x:Key="out_visaDRTransferVat">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_116">visaDRTransferVat</mca:CSharpReference>
                 </OutArgument>
@@ -382,41 +371,11 @@
                 <OutArgument x:TypeArguments="x:Double" x:Key="out_visaDRAirtimeTranAmt">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_113">visaDRAirtimeTranAmt</mca:CSharpReference>
                 </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_summary">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_112">summary</mca:CSharpReference>
-                </OutArgument>
                 <OutArgument x:TypeArguments="x:Double" x:Key="out_NMCCRIssuerFee">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_111">NMCCRIssuerFee</mca:CSharpReference>
                 </OutArgument>
                 <OutArgument x:TypeArguments="x:Double" x:Key="out_NMCCRIssuerVat">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_110">NMCCRIssuerVat</mca:CSharpReference>
-                </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_payAttCR99999IssuerFee">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_109">payAttCR99999IssuerFee</mca:CSharpReference>
-                </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_payAttCR99999IssuerVat">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_108">payAttCR99999IssuerVat</mca:CSharpReference>
-                </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_payAttCR99999TranAmt">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_107">payAttCR99999TranAmt</mca:CSharpReference>
-                </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_payAttCR901102IssuerFee">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_106">payAttCR901102IssuerFee</mca:CSharpReference>
-                </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_payAttCR901102IssuerVat">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_105">payAttCR901102IssuerVat</mca:CSharpReference>
-                </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_payAttCR901102TranAmt">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_104">payAttCR901102TranAmt</mca:CSharpReference>
-                </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_payAttCR901105IssuerFee">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_103">payAttCR901105IssuerFee</mca:CSharpReference>
-                </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_payAttCR901105IssuerVat">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_102">payAttCR901105IssuerVat</mca:CSharpReference>
-                </OutArgument>
-                <OutArgument x:TypeArguments="x:Double" x:Key="out_payAttCR901105TranAmt">
-                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_101">payAttCR901105TranAmt</mca:CSharpReference>
                 </OutArgument>
                 <OutArgument x:TypeArguments="x:Double" x:Key="out_NMCDRBillPYMTIssuerFee">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_100">NMCDRBillPYMTIssuerFee</mca:CSharpReference>
@@ -466,6 +425,42 @@
                 <OutArgument x:TypeArguments="x:Double" x:Key="out_verveDRBillPYMTExtraVat">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_85">verveDRBillPYMTExtraVat</mca:CSharpReference>
                 </OutArgument>
+                <OutArgument x:TypeArguments="x:Double" x:Key="out_summary">
+                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_112">summary</mca:CSharpReference>
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Double" x:Key="out_VisaDRTransferRate">
+                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_169">visaDRTransferNewFee</mca:CSharpReference>
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Double" x:Key="out_verveDRTransferRate">
+                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_168">verveDRTransferNewFee</mca:CSharpReference>
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Double" x:Key="out_NMCDRTransferRate">
+                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_167">NMCDRTransferNewFee</mca:CSharpReference>
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Double" x:Key="out_payattDR901105IssuerFee">
+                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_174">payattDR901105IssuerFee</mca:CSharpReference>
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Double" x:Key="out_payattDR901105IssuerVat">
+                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_175">payattDR901105IssuerVat</mca:CSharpReference>
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Double" x:Key="out_PayattitudeCrTransAmout">
+                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_173">PayattitudeCrTransAmout</mca:CSharpReference>
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Double" x:Key="out_PayattitudeCrIssuerFee">
+                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_172">PayattitudeCrIssuerFee</mca:CSharpReference>
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Double" x:Key="out_PayattitudeCrIssueVat">
+                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_171">PayattitudeCrIssueVat</mca:CSharpReference>
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Double" x:Key="out_payAttDR901105TranAmt">
+                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_176">payAttDR901105TranAmt</mca:CSharpReference>
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Double" x:Key="out_payAttDR901102IssuerFee">
+                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_177">payAttDR901102IssuerFee</mca:CSharpReference>
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:Double" x:Key="out_payAttDR901102IssuerVat">
+                  <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_178">payAttDR901102IssuerVat</mca:CSharpReference>
+                </OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -479,10 +474,10 @@
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">430,454.5</av:Point>
                     <av:Size x:Key="ShapeSize">200,51</av:Size>
-                    <av:PointCollection x:Key="ConnectorLocation">530,505.5 530,535.5 170.666666666667,535.5 170.666666666667,513.666666666667</av:PointCollection>
+                    <av:PointCollection x:Key="ConnectorLocation">530,505.5 530,535.5 210.666666666667,535.5 210.666666666667,503.666666666667</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PAYArena_Upload_File workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="PAYArena_Settlement\\PAYArena_Upload_File.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PAYArena_Upload_File workflow" sap:VirtualizedContainerService.HintSize="374,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="PAYArena_Settlement\\PAYArena_Upload_File.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
                       <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_258">Config</mca:CSharpValue>
@@ -524,7 +519,7 @@
                       <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_247">payattDR901105NewFee</mca:CSharpValue>
                     </InArgument>
                     <InArgument x:TypeArguments="x:Double" x:Key="in_payattDR901105Vat">
-                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_246">payattDR901105Vat</mca:CSharpValue>
+                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_320">payattDR901105Vat</mca:CSharpValue>
                     </InArgument>
                     <InArgument x:TypeArguments="x:Double" x:Key="in_verveDRBillPYMTIssuerFee">
                       <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_245">verveDRBillPYMTIssuerFee</mca:CSharpValue>
@@ -601,33 +596,6 @@
                     <InArgument x:TypeArguments="x:Double" x:Key="in_NMCCRIssuerVat">
                       <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_221">NMCCRIssuerVat</mca:CSharpValue>
                     </InArgument>
-                    <InArgument x:TypeArguments="x:Double" x:Key="in_payAttCR99999IssuerFee">
-                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_220">payAttCR99999IssuerFee</mca:CSharpValue>
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:Double" x:Key="in_payAttCR99999IssuerVat">
-                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_219">payAttCR99999IssuerVat</mca:CSharpValue>
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:Double" x:Key="in_payAttCR99999TranAmt">
-                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_218">payAttCR99999TranAmt</mca:CSharpValue>
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:Double" x:Key="in_payAttCR901102IssuerFee">
-                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_217">payAttCR901102IssuerFee</mca:CSharpValue>
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:Double" x:Key="in_payAttCR901102IssuerVat">
-                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_216">payAttCR901102IssuerVat</mca:CSharpValue>
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:Double" x:Key="in_payAttCR901102TranAmt">
-                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_215">payAttCR901102TranAmt</mca:CSharpValue>
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:Double" x:Key="in_payAttCR901105IssuerFee">
-                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_214">payAttCR901105IssuerFee</mca:CSharpValue>
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:Double" x:Key="in_payAttCR901105IssuerVat">
-                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_213">payAttCR901105IssuerVat</mca:CSharpValue>
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:Double" x:Key="in_payAttCR901105TranAmt">
-                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_212">payAttCR901105TranAmt</mca:CSharpValue>
-                    </InArgument>
                     <InArgument x:TypeArguments="x:Double" x:Key="in_NMCDRBillPYMTIssuerFee">
                       <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_211">NMCDRBillPYMTIssuerFee</mca:CSharpValue>
                     </InArgument>
@@ -680,6 +648,21 @@
                     <InArgument x:TypeArguments="x:String" x:Key="in_ReportDate">
                       <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_313">ReportDate.ToString("dd MM yyyy")</mca:CSharpValue>
                     </InArgument>
+                    <InArgument x:TypeArguments="x:Double" x:Key="in_PayattitudeCrTransAmout">
+                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_318">PayattitudeCrTransAmout</mca:CSharpValue>
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:Double" x:Key="in_PayattitudeCrIssuerFee">
+                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_317">PayattitudeCrIssuerFee</mca:CSharpValue>
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:Double" x:Key="in_PayattitudeCrIssueVat">
+                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_316">PayattitudeCrIssueVat</mca:CSharpValue>
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:Double" x:Key="in_payattDR901105IssuerFee">
+                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_319">PayattDR901105IssuerFee</mca:CSharpValue>
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:Double" x:Key="in_payattDR901105IssuerVat">
+                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_321">payattDR901105IssuerVat</mca:CSharpValue>
+                    </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -699,10 +682,10 @@
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">180,24.1866666666667</av:Point>
                 <av:Size x:Key="ShapeSize">200,51</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">380,49.6866666666667 530,49.6866666666667 530,87</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">380,49.6866666666667 530,49.6866666666667 530,97</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Kill_All_Application workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_47" UnSafe="False" WorkflowFileName="Project\\Kill_All_Application.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Kill_All_Application workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_47" UnSafe="False" WorkflowFileName="Project\\Kill_All_Application.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:InvokeWorkflowFile.Arguments>
@@ -716,9 +699,9 @@
               <FlowStep x:Name="__ReferenceID5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <av:Point x:Key="ShapeLocation">430,87</av:Point>
+                    <av:Point x:Key="ShapeLocation">430,97</av:Point>
                     <av:Size x:Key="ShapeSize">200,66</av:Size>
-                    <av:PointCollection x:Key="ConnectorLocation">530,153 530,203</av:PointCollection>
+                    <av:PointCollection x:Key="ConnectorLocation">530,163 530,223</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <Sequence DisplayName="Load all Config Portal" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_28">
@@ -730,7 +713,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Load Internal Config Values" sap:VirtualizedContainerService.HintSize="304,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_48" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Project\Initialize_Config_Values.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Load Internal Config Values" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_48" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Project\Initialize_Config_Values.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFilePath">Data\VisaConfig.xlsx</InArgument>
                       <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">
@@ -744,7 +727,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:InvokeWorkflowFile>
-                  <Sequence sap2010:Annotation.AnnotationText="This Work Flow validates all work folder used (Its create the folder if is not created), See Beolow for details&#xA;1. Exception Folder&#xA;2. Archive Folder&#xA;3. Processing Folder" DisplayName="Validate Work Folders" sap:VirtualizedContainerService.HintSize="304,183" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <Sequence sap2010:Annotation.AnnotationText="This Work Flow validates all work folder used (Its create the folder if is not created), See Beolow for details&#xA;1. Exception Folder&#xA;2. Archive Folder&#xA;3. Processing Folder" DisplayName="Validate Work Folders" sap:VirtualizedContainerService.HintSize="200,183" sap2010:WorkflowViewState.IdRef="Sequence_20">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -818,7 +801,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
                   </Sequence>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Load External Config workflow" sap:VirtualizedContainerService.HintSize="304,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_52" UnSafe="False" WorkflowFileName="Project\\Load_External_Config.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Load External Config workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_52" UnSafe="False" WorkflowFileName="Project\\Load_External_Config.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Sysfig">
                         <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_148">Sysfig</mca:CSharpReference>
@@ -834,14 +817,14 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:InvokeWorkflowFile>
-                  <Sequence DisplayName="Date Logic" sap:VirtualizedContainerService.HintSize="304,425" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                  <Sequence DisplayName="Date Logic" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_27">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="TrackerFileExist" />
                       <Variable x:TypeArguments="x:String" Name="TrackerFilePath" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -1234,9 +1217,9 @@
                   <FlowStep x:Name="__ReferenceID6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:Point x:Key="ShapeLocation">430,203</av:Point>
+                        <av:Point x:Key="ShapeLocation">430,223</av:Point>
                         <av:Size x:Key="ShapeSize">200,51</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">530,254 530,324.02</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">530,274 530,324.02</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Dowload_Logic workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_54" UnSafe="False" WorkflowFileName="Project\\Dowload_Logic.xaml">
