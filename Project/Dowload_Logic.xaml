@@ -11,7 +11,7 @@
     <InArgument x:TypeArguments="s:DateTime" />
   </this:Dowload_Reports.in_ReportDate>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>712,1591</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>982,2720</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
@@ -95,9 +95,10 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Dowload_Reports" sap:VirtualizedContainerService.HintSize="722,1526" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Dowload_Reports" sap:VirtualizedContainerService.HintSize="992,2655" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="FtpCredential" />
       <Variable x:TypeArguments="x:String" Name="FtpURL" />
@@ -136,7 +137,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Report Download Log" sap:VirtualizedContainerService.HintSize="680,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+    <ui:LogMessage DisplayName="Report Download Log" sap:VirtualizedContainerService.HintSize="950,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_185">"Report Module Begin"</mca:CSharpValue>
@@ -149,7 +150,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:MultipleAssign DisplayName="Assign all WF Varables" sap:VirtualizedContainerService.HintSize="680,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+    <ui:MultipleAssign DisplayName="Assign all WF Varables" sap:VirtualizedContainerService.HintSize="950,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
@@ -425,7 +426,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <Sequence DisplayName="Pre Load" sap:VirtualizedContainerService.HintSize="680,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Pre Load" sap:VirtualizedContainerService.HintSize="950,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="VisaDrSheetRead" />
         <Variable x:TypeArguments="x:String" Name="MasCrSheetRead" />
@@ -631,7 +632,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="680,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="950,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_65">
@@ -667,7 +668,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CheckReportPath workflow" sap:VirtualizedContainerService.HintSize="680,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Project\\CheckReportPath.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CheckReportPath workflow" sap:VirtualizedContainerService.HintSize="950,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Project\\CheckReportPath.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_FilePath1">
           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_200">DownloadedFilePath</mca:CSharpValue>
@@ -683,7 +684,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <Sequence DisplayName="Sequence: Dowload " sap:VirtualizedContainerService.HintSize="680,66" sap2010:WorkflowViewState.IdRef="Sequence_38">
+    <Sequence DisplayName="Sequence: Dowload " sap:VirtualizedContainerService.HintSize="950,1805" sap2010:WorkflowViewState.IdRef="Sequence_38">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="Counter" />
         <Variable x:TypeArguments="x:String" Name="Selector" />
@@ -692,11 +693,11 @@
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="487,51" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="908,51" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info">
         <ui:LogMessage.Message>
           <InArgument x:TypeArguments="x:Object">
             <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_257">"PAY ARENA DOWNLOAD BEGIN"</mca:CSharpValue>
@@ -709,7 +710,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <If DisplayName="If Report is not Dowloaded" sap:VirtualizedContainerService.HintSize="487,407" sap2010:WorkflowViewState.IdRef="If_16">
+      <If DisplayName="If Report is not Dowloaded" sap:VirtualizedContainerService.HintSize="908,1531" sap2010:WorkflowViewState.IdRef="If_16">
         <If.Condition>
           <InArgument x:TypeArguments="x:Boolean">
             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_219">ReportDowloaded == null</mca:CSharpValue>
@@ -722,7 +723,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="DOWNLOAD from Portal" sap:VirtualizedContainerService.HintSize="242,249" sap2010:WorkflowViewState.IdRef="Sequence_36">
+          <Sequence DisplayName="DOWNLOAD from Portal" sap:VirtualizedContainerService.HintSize="663,1373" sap2010:WorkflowViewState.IdRef="Sequence_36">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="DownloadFileExist" />
             </Sequence.Variables>
@@ -732,7 +733,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="All Possible Part Logic" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_32">
+            <Sequence DisplayName="All Possible Part Logic" sap:VirtualizedContainerService.HintSize="621,66" sap2010:WorkflowViewState.IdRef="Sequence_32">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -758,7 +759,7 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:PathExists>
             </Sequence>
-            <If DisplayName="If Download File exist" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_15">
+            <If DisplayName="If Download File exist" sap:VirtualizedContainerService.HintSize="621,1175" sap2010:WorkflowViewState.IdRef="If_15">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
                   <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_221">DownloadFileExist</mca:CSharpValue>
@@ -766,7 +767,7 @@
               </If.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -786,17 +787,17 @@
                 </ui:LogMessage>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Sequence: Login and Download" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                <Sequence DisplayName="Sequence: Login and Download" sap:VirtualizedContainerService.HintSize="376,1017" sap2010:WorkflowViewState.IdRef="Sequence_35">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="Login" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="Assign Counter" sap:VirtualizedContainerService.HintSize="710,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                  <Assign DisplayName="Assign Counter" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">
                         <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_135">Counter</mca:CSharpReference>
@@ -806,7 +807,7 @@
                       <InArgument x:TypeArguments="x:Int32">2</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While: Try to login Times " sap:VirtualizedContainerService.HintSize="710,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While: Try to login Times " sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
                     <ui:InterruptibleDoWhile.Body>
                       <TryCatch sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                         <sap:WorkflowViewStateService.ViewState>
@@ -977,7 +978,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:InterruptibleDoWhile>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="710,51" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info">
                     <ui:LogMessage.Message>
                       <InArgument x:TypeArguments="x:Object">
                         <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_237">"Log in Value: "+Login</mca:CSharpValue>
@@ -990,7 +991,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="710,51" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info">
                     <ui:LogMessage.Message>
                       <InArgument x:TypeArguments="x:Object">
                         <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_238">"Log in Value: "+HasFileDownloaded</mca:CSharpValue>
@@ -1003,7 +1004,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <If DisplayName="If Can't Login" sap:VirtualizedContainerService.HintSize="710,51" sap2010:WorkflowViewState.IdRef="If_13">
+                  <If DisplayName="If Can't Login" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="If_13">
                     <If.Condition>
                       <InArgument x:TypeArguments="x:Boolean">
                         <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_239">Login == "NO"</mca:CSharpValue>
@@ -1023,7 +1024,7 @@
                       </Throw>
                     </If.Then>
                   </If>
-                  <If DisplayName="If File Unable to Download" sap:VirtualizedContainerService.HintSize="710,51" sap2010:WorkflowViewState.IdRef="If_14">
+                  <If DisplayName="If File Unable to Download" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="If_14">
                     <If.Condition>
                       <InArgument x:TypeArguments="x:Boolean">
                         <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_241">HasFileDownloaded != "YES"</mca:CSharpValue>
@@ -1038,12 +1039,12 @@
                     <If.Then>
                       <Throw DisplayName="Throw Report Not Found" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_9">
                         <InArgument x:TypeArguments="s:Exception">
-                          <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_242">new BusinessRuleException("ERRORCODE005 The current report can not be found, please check if the report has been uploaded")</mca:CSharpValue>
+                          <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_270">new BusinessRuleException("ERRORCODE005 The Pay Arena report can not be found, please check if the report "+in_ReportDate.ToString("dd-MMM-yyy")+" has been uploaded")</mca:CSharpValue>
                         </InArgument>
                       </Throw>
                     </If.Then>
                   </If>
-                  <Assign DisplayName="Assign DownloadedFilePath" sap:VirtualizedContainerService.HintSize="710,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                  <Assign DisplayName="Assign DownloadedFilePath" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_9">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">
                         <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_141">DownloadedFilePath</mca:CSharpReference>
@@ -1055,7 +1056,7 @@
                       </InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:WriteCell Cell="A9" DisplayName="Write Cell Download Link" sap:VirtualizedContainerService.HintSize="710,115" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="Tracker">
+                  <ui:WriteCell Cell="A9" DisplayName="Write Cell Download Link" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="Tracker">
                     <ui:WriteCell.Text>
                       <InArgument x:TypeArguments="x:String">
                         <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_244">DownloadedFilePath</mca:CSharpValue>
@@ -1073,7 +1074,7 @@
                       </InArgument>
                     </ui:WriteCell.WorkbookPath>
                   </ui:WriteCell>
-                  <ui:WriteCell Cell="A2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="710,115" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="Tracker" Text="DONE">
+                  <ui:WriteCell Cell="A2" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="Tracker" Text="DONE">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1148,7 +1149,7 @@
           </Sequence>
         </If.Else>
       </If>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="487,51" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="908,51" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info">
         <ui:LogMessage.Message>
           <InArgument x:TypeArguments="x:Object">
             <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_258">"PAY ARENA DOWNLOAD FINISHED"</mca:CSharpValue>
@@ -1162,14 +1163,14 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
     </Sequence>
-    <Sequence DisplayName="READ ALL SHEET " sap:VirtualizedContainerService.HintSize="680,676" sap2010:WorkflowViewState.IdRef="Sequence_31">
+    <Sequence DisplayName="READ ALL SHEET " sap:VirtualizedContainerService.HintSize="950,66" sap2010:WorkflowViewState.IdRef="Sequence_31">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="638,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="621,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info">
         <ui:LogMessage.Message>
           <InArgument x:TypeArguments="x:Object">
             <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_130">"Bot about to read Visa Sheet "</mca:CSharpValue>
@@ -1182,7 +1183,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
-      <If DisplayName="If SHEET Has not been Read" sap:VirtualizedContainerService.HintSize="638,453" sap2010:WorkflowViewState.IdRef="If_11">
+      <If DisplayName="If SHEET Has not been Read" sap:VirtualizedContainerService.HintSize="621,453" sap2010:WorkflowViewState.IdRef="If_11">
         <If.Condition>
           <InArgument x:TypeArguments="x:Boolean">
             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_175">SheetRead == null</mca:CSharpValue>
@@ -1195,14 +1196,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="READ Sheet" sap:VirtualizedContainerService.HintSize="393,295" sap2010:WorkflowViewState.IdRef="Sequence_28">
+          <Sequence DisplayName="READ Sheet" sap:VirtualizedContainerService.HintSize="376,295" sap2010:WorkflowViewState.IdRef="Sequence_28">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Copy_Report_To_Processing workflow" sap:VirtualizedContainerService.HintSize="351,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Project\\Copy_Report_To_Processing.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Copy_Report_To_Processing workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Project\\Copy_Report_To_Processing.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="DownloadedFilePath">
                   <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_152">DownloadedFilePath</mca:CSharpValue>
@@ -1254,7 +1255,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <ui:WriteCell Cell="B2" DisplayName="Write Cell Read Visa Sheet" sap:VirtualizedContainerService.HintSize="351,51" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="Tracker" Text="DONE">
+            <ui:WriteCell Cell="B2" DisplayName="Write Cell Read Visa Sheet" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="Tracker" Text="DONE">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1286,7 +1287,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Delete_Download_File workflow" sap:VirtualizedContainerService.HintSize="680,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Project\\Delete_Download_File.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Delete_Download_File workflow" sap:VirtualizedContainerService.HintSize="950,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Project\\Delete_Download_File.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_DownloadFilePath">
           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_165">DownloadedFilePath</mca:CSharpValue>
@@ -1299,7 +1300,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="680,51" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="950,51" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_166">"Bot is Done with Downloading"</mca:CSharpValue>
