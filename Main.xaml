@@ -46,7 +46,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="43">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="86">
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
@@ -90,6 +90,7 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Bot Hub" sap:VirtualizedContainerService.HintSize="830,1468" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -834,7 +835,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">530,163 530,223</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Load all Config Portal" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                  <Sequence DisplayName="Load all Config Portal" sap:VirtualizedContainerService.HintSize="418,1288" sap2010:WorkflowViewState.IdRef="Sequence_28">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Object" Name="TrackerAddDays" />
                     </Sequence.Variables>
@@ -843,7 +844,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Load Internal Config Values" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_48" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Project\Initialize_Config_Values.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Load Internal Config Values" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_48" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Project\Initialize_Config_Values.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFilePath">Data\VisaConfig.xlsx</InArgument>
                         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">
@@ -857,7 +858,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:InvokeWorkflowFile>
-                    <Sequence sap2010:Annotation.AnnotationText="This Work Flow validates all work folder used (Its create the folder if is not created), See Beolow for details&#xA;1. Exception Folder&#xA;2. Archive Folder&#xA;3. Processing Folder" DisplayName="Validate Work Folders" sap:VirtualizedContainerService.HintSize="262,183" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                    <Sequence sap2010:Annotation.AnnotationText="This Work Flow validates all work folder used (Its create the folder if is not created), See Beolow for details&#xA;1. Exception Folder&#xA;2. Archive Folder&#xA;3. Processing Folder" DisplayName="Validate Work Folders" sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_20">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -931,7 +932,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:LogMessage>
                     </Sequence>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Load External Config workflow" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_52" UnSafe="False" WorkflowFileName="Project\\Load_External_Config.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Load External Config workflow" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_52" UnSafe="False" WorkflowFileName="Project\\Load_External_Config.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Sysfig">
                           <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_148">Sysfig</mca:CSharpReference>
@@ -947,7 +948,57 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:InvokeWorkflowFile>
-                    <Assign DisplayName="Assign reportDate" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                    <Sequence DisplayName="Delete WorkFiles" sap:VirtualizedContainerService.HintSize="376,509" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="ProcessingFolder" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Comment sap:VirtualizedContainerService.HintSize="334,74" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// This sequces should be delected to has resume capability" />
+                      <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">
+                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_190">ProcessingFolder</mca:CSharpReference>
+                          </OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_335">Config["ProcessingFolderPath"].ToString()</mca:CSharpValue>
+                          </InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Delete_Download_Tracker" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_56" UnSafe="False" WorkflowFileName="Project\\Delete_Download_File.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_DownloadFilePath">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_336">Path.Combine(ProcessingFolder,"Tracker.xlsx")</mca:CSharpValue>
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Delete_Download_Procesing" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_57" UnSafe="False" WorkflowFileName="Project\\Delete_Download_File.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_DownloadFilePath">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_337">Path.Combine(ProcessingFolder,"PAYArena_WorkLog.xlsx")</mca:CSharpValue>
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
+                    <Assign DisplayName="Assign reportDate" sap:VirtualizedContainerService.HintSize="376,60" sap2010:WorkflowViewState.IdRef="Assign_15">
                       <Assign.To>
                         <OutArgument x:TypeArguments="s:DateTime">
                           <mca:CSharpReference x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpReference`1_186">ReportDate</mca:CSharpReference>
@@ -959,7 +1010,7 @@
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If DisplayName="If is Monday" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_5">
+                    <If DisplayName="If is Monday" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="If_5">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_329">ReportDate.DayOfWeek.ToString().ToUpper() == "MONDAY"</mca:CSharpValue>
@@ -1000,7 +1051,7 @@
                         </Assign>
                       </If.Else>
                     </If>
-                    <ui:LogMessage DisplayName="Log Date info Log" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info">
+                    <ui:LogMessage DisplayName="Log Date info Log" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info">
                       <ui:LogMessage.Message>
                         <InArgument x:TypeArguments="x:Object">
                           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_332">"Bot is treating Transaction of Date: "+ReportDate.ToString("dd-MMM-yyyy")</mca:CSharpValue>
@@ -1023,7 +1074,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">530,274 530,324.02</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Dowload_Logic workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_54" UnSafe="False" WorkflowFileName="Project\\Dowload_Logic.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Dowload_Logic workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_54" UnSafe="False" WorkflowFileName="Project\\Dowload_Logic.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
                             <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_299">Config</mca:CSharpValue>
