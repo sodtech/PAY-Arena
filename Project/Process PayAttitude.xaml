@@ -3,7 +3,7 @@
     <x:Property Name="io_payattitudeDT" Type="InOutArgument(sd:DataTable)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>679,515</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>697,1032</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="27">
@@ -72,10 +72,9 @@
       <AssemblyReference>UiPath.Database</AssemblyReference>
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Pay Attitude Debit" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_351">
+  <Sequence DisplayName="Pay Attitude Debit" sap:VirtualizedContainerService.HintSize="476,967" sap2010:WorkflowViewState.IdRef="Sequence_351">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Double" Name="FEE" />
     </Sequence.Variables>
@@ -85,7 +84,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_DT.Columns.Add(&quot;NEW FEE&quot;).SetOrdinal(32);&#xA;in_DT.Columns.Add(&quot;ORIGINAL AMOUNT&quot;).SetOrdinal(33);&#xA;out_DT = in_DT;" DisplayName="Code to add Two column to the DT" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_DT.Columns.Add(&quot;NEW FEE&quot;).SetOrdinal(32);&#xA;in_DT.Columns.Add(&quot;ORIGINAL AMOUNT&quot;).SetOrdinal(33);&#xA;out_DT = in_DT;" DisplayName="Code to add Two column to the DT" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">
           <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1392">io_payattitudeDT</mca:CSharpValue>
@@ -96,18 +95,18 @@
       </ui:InvokeCode.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeCode>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,558" sap2010:WorkflowViewState.IdRef="ForEachRow_27">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,671" sap2010:WorkflowViewState.IdRef="ForEachRow_27">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="currentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,443" sap2010:WorkflowViewState.IdRef="Sequence_350">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,556" sap2010:WorkflowViewState.IdRef="Sequence_350">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Double" Name="CurrentTranamount" />
             </Sequence.Variables>
@@ -117,7 +116,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="Assign currentTransfer" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_424">
+            <Assign DisplayName="Assign currentTransfer" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_424">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Double">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_721">CurrentTranamount</mca:CSharpReference>
@@ -129,7 +128,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <ui:InvokeCode ContinueOnError="{x:Null}" Code="string Amt = &quot;&quot;;&#xA;string  FirstPart =&quot;&quot;;&#xA;&#xA;Amt = in_TranAmount.ToString().Split('.').LastOrDefault();&#xA;FirstPart = Convert.ToInt32(in_TranAmount).ToString();&#xA;&#xA;if (Amt == FirstPart){&#xA;&#x9;out_FEE = 10;&#xA;}&#xA;else if (Amt == &quot;75&quot;){&#xA;&#x9;out_FEE = 10.75;&#xA;}&#xA;else if(Amt == &quot;88&quot;){&#xA;&#x9;out_FEE = 20.88;&#xA;} &#xA;else{&#xA;&#x9;out_FEE = 10;&#xA;}&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="string Amt = &quot;&quot;;&#xD;&#xA;string  FirstPart =&quot;&quot;;&#xD;&#xA;&#xD;&#xA;Amt = in_TranAmount.ToString().Split('.').LastOrDefault();&#xD;&#xA;FirstPart = Convert.ToInt32(in_TranAmount).ToString();&#xD;&#xA;&#xD;&#xA;if (Amt == FirstPart){&#xD;&#xA;&#x9;out_FEE = 10;&#xD;&#xA;}&#xD;&#xA;else if (Amt == &quot;75&quot;){&#xD;&#xA;&#x9;out_FEE = 10.75;&#xD;&#xA;}&#xD;&#xA;else if(Amt == &quot;88&quot;){&#xD;&#xA;&#x9;out_FEE = 26.88;&#xD;&#xA;} &#xD;&#xA;else{&#xD;&#xA;&#x9;out_FEE = 10;&#xD;&#xA;}&#xD;&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
               <ui:InvokeCode.Arguments>
                 <InArgument x:TypeArguments="x:Double" x:Key="in_TranAmount">
                   <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1404">CurrentTranamount</mca:CSharpValue>
@@ -140,12 +139,12 @@
               </ui:InvokeCode.Arguments>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeCode>
-            <Assign DisplayName="Assign FEE" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_434">
+            <Assign DisplayName="Assign FEE" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_434">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Object">
                   <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_727">currentRow["NEW FEE"]</mca:CSharpReference>
@@ -157,7 +156,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="Assign ORIGINAL AMOUNT" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_436">
+            <Assign DisplayName="Assign ORIGINAL AMOUNT" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_436">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Object">
                   <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_728">currentRow["ORIGINAL AMOUNT"]</mca:CSharpReference>
@@ -179,7 +178,7 @@
       </ui:ForEachRow.DataTable>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
