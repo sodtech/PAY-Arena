@@ -1,9 +1,10 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Process_Transfer_Debit" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="io_visaDRTransfer" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="in_Sheet" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>941,1366</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>732,719</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -77,16 +78,17 @@
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="951,1301" sap2010:WorkflowViewState.IdRef="Sequence_257">
+  <Sequence sap:VirtualizedContainerService.HintSize="476,654" sap2010:WorkflowViewState.IdRef="Sequence_257">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_DT.Columns.Add(&quot;ACTUAL AMOUNT&quot;).SetOrdinal(32);&#xA;in_DT.Columns.Add(&quot;RATE&quot;).SetOrdinal(33);&#xA;in_DT.Columns.Add(&quot;VAT&quot;).SetOrdinal(34);&#xA;out_DT = in_DT;" DisplayName="Code to add Three column to the DT" sap:VirtualizedContainerService.HintSize="909,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_DT.Columns.Add(&quot;ACTUAL AMOUNT&quot;).SetOrdinal(32);&#xA;in_DT.Columns.Add(&quot;RATE&quot;).SetOrdinal(33);&#xA;in_DT.Columns.Add(&quot;VAT&quot;).SetOrdinal(34);&#xA;out_DT = in_DT;" DisplayName="Code to add Three column to the DT" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_DT">
           <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1021">io_visaDRTransfer</mca:CSharpValue>
@@ -102,13 +104,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeCode>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="909,1005" sap2010:WorkflowViewState.IdRef="ForEachRow_22">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,358" sap2010:WorkflowViewState.IdRef="ForEachRow_22">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="transferRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="875,890" sap2010:WorkflowViewState.IdRef="Sequence_256">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,243" sap2010:WorkflowViewState.IdRef="Sequence_256">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="lessThan5050" />
               <Variable x:TypeArguments="x:Boolean" Name="above50050" />
@@ -124,7 +126,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="Assign currentTransfer" sap:VirtualizedContainerService.HintSize="833,60" sap2010:WorkflowViewState.IdRef="Assign_302">
+            <Assign DisplayName="Assign currentTransfer" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_302">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Double">
                   <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_535">currentTranamount</mca:CSharpReference>
@@ -136,15 +138,15 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <If DisplayName="If Mastercard Tras" sap:VirtualizedContainerService.HintSize="833,698" sap2010:WorkflowViewState.IdRef="If_66">
+            <If DisplayName="If Mastercard Tras" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_66">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
-                  <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1024">io_visaDRTransfer.ToString().ToLower().Contains("mastercard")</mca:CSharpValue>
+                  <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1050">in_Sheet.ToLower() =="mastercard"</mca:CSharpValue>
                 </InArgument>
               </If.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
