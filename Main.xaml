@@ -807,7 +807,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">510,183 510,213</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Load all Config Portal" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                  <Sequence DisplayName="Load all Config Portal" sap:VirtualizedContainerService.HintSize="418,1288" sap2010:WorkflowViewState.IdRef="Sequence_28">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Object" Name="TrackerAddDays" />
                     </Sequence.Variables>
