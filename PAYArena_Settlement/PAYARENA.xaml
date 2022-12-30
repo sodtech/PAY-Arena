@@ -57,7 +57,7 @@
     <x:Property Name="out_PayattitudeDrOrignalAmout" Type="OutArgument(x:Double)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1261,4516</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1049,3049</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -142,10 +142,9 @@
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PAYARENA" sap:VirtualizedContainerService.HintSize="1271,4451" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PAYARENA" sap:VirtualizedContainerService.HintSize="1059,2984" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="NMCCRTranDate" />
       <Variable x:TypeArguments="x:String" Name="NMCCRIssuerRRN" />
@@ -159,7 +158,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Add Coloumns" sap:VirtualizedContainerService.HintSize="1229,51" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+    <ui:CommentOut DisplayName="Add Coloumns" sap:VirtualizedContainerService.HintSize="1017,51" sap2010:WorkflowViewState.IdRef="CommentOut_10">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_323">
           <sap:WorkflowViewStateService.ViewState>
@@ -313,7 +312,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:LogMessage DisplayName="Log: PAYArena Started" sap:VirtualizedContainerService.HintSize="1229,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+    <ui:LogMessage DisplayName="Log: PAYArena Started" sap:VirtualizedContainerService.HintSize="1017,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"Bot is about to process data"</mca:CSharpValue>
@@ -326,7 +325,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1229,51" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1017,51" sap2010:WorkflowViewState.IdRef="CommentOut_8">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="473,143" sap2010:WorkflowViewState.IdRef="Sequence_319">
           <sap:WorkflowViewStateService.ViewState>
@@ -427,7 +426,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence DisplayName="Compute all Merchant" sap:VirtualizedContainerService.HintSize="1229,3980" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Compute all Merchant" sap:VirtualizedContainerService.HintSize="1017,2513" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="SisfigFilePath" />
         <Variable x:TypeArguments="x:String" Name="visaCRTemplateSheet" />
@@ -445,7 +444,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1077,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="975,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
@@ -541,7 +540,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
-      <Sequence sap2010:Annotation.AnnotationText="Visa, NMC, Verve and Payatitude DR Sequence" DisplayName="DR Sheets Sequence" sap:VirtualizedContainerService.HintSize="1077,3691" sap2010:WorkflowViewState.IdRef="Sequence_116">
+      <Sequence sap2010:Annotation.AnnotationText="Visa, NMC, Verve and Payatitude DR Sequence" DisplayName="DR Sheets Sequence" sap:VirtualizedContainerService.HintSize="975,1874" sap2010:WorkflowViewState.IdRef="Sequence_116">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -549,7 +548,7 @@
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Visa DR Sequence" sap:VirtualizedContainerService.HintSize="1035,66" sap2010:WorkflowViewState.IdRef="Sequence_264">
+        <Sequence DisplayName="Visa DR Sequence" sap:VirtualizedContainerService.HintSize="933,1342" sap2010:WorkflowViewState.IdRef="Sequence_264">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="visaDRworkLogDT" />
             <Variable x:TypeArguments="x:Int32" Name="workLogRowCount" />
@@ -557,11 +556,11 @@
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Read Sheet" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_321">
+          <Sequence DisplayName="Read Sheet" sap:VirtualizedContainerService.HintSize="891,66" sap2010:WorkflowViewState.IdRef="Sequence_321">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -638,7 +637,7 @@
               </ui:LogMessage>
             </Sequence>
           </Sequence>
-          <If DisplayName="If worklog count is greater than 0" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_68">
+          <If DisplayName="If worklog count is greater than 0" sap:VirtualizedContainerService.HintSize="891,1144" sap2010:WorkflowViewState.IdRef="If_68">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_945">workLogRowCount &gt; 0</mca:CSharpValue>
@@ -646,33 +645,33 @@
             </If.Condition>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence DisplayName="Visa DR" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_263">
+              <Sequence DisplayName="Visa DR" sap:VirtualizedContainerService.HintSize="646,986" sap2010:WorkflowViewState.IdRef="Sequence_263">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="604,682" sap2010:WorkflowViewState.IdRef="CommentOut_13">
                   <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="568,158" sap2010:WorkflowViewState.IdRef="Sequence_361">
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="568,604" sap2010:WorkflowViewState.IdRef="Sequence_361">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Filter Visa DR by Bill payment Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_247">
+                      <Sequence DisplayName="Filter Visa DR by Bill payment Sequence" sap:VirtualizedContainerService.HintSize="526,512" sap2010:WorkflowViewState.IdRef="Sequence_247">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataTable" Name="visaDRBillPayment" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -748,7 +747,7 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:LogMessage>
                         </Sequence>
-                        <If DisplayName="If workLogRowCount is greater than 0" sap:VirtualizedContainerService.HintSize="484,224" sap2010:WorkflowViewState.IdRef="If_62">
+                        <If DisplayName="If workLogRowCount is greater than 0" sap:VirtualizedContainerService.HintSize="484,223" sap2010:WorkflowViewState.IdRef="If_62">
                           <If.Condition>
                             <InArgument x:TypeArguments="x:Boolean">
                               <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_951">workLogRowCount &gt; 0</mca:CSharpValue>
@@ -776,7 +775,7 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process Bill Payment Debit" sap:VirtualizedContainerService.HintSize="346,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="PAYArena_Settlement\\Process Bill Payment Debit.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process Bill Payment Debit" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="PAYArena_Settlement\\Process Bill Payment Debit.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_DTBillPayment">
                                     <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_663">visaDRBillPayment</mca:CSharpReference>
@@ -787,19 +786,19 @@
                                 </ui:InvokeWorkflowFile.Arguments>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:InvokeWorkflowFile>
-                              <Sequence DisplayName="Get the total Sum" sap:VirtualizedContainerService.HintSize="346,1529" sap2010:WorkflowViewState.IdRef="Sequence_245">
+                              <Sequence DisplayName="Get the total Sum" sap:VirtualizedContainerService.HintSize="379,412" sap2010:WorkflowViewState.IdRef="Sequence_245">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="304,51" sap2010:WorkflowViewState.IdRef="LogMessage_204" Level="Info">
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_204" Level="Info">
                                   <ui:LogMessage.Message>
                                     <InArgument x:TypeArguments="x:Object">
                                       <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_973">"Bot about to create a sheet for: "+visaDRBillPayment +" Visa DR Bill Payment in the work log"</mca:CSharpValue>
@@ -812,7 +811,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:LogMessage>
-                                <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="304,51" sap2010:WorkflowViewState.IdRef="WriteRange_11" SheetName="Visa DR Bill PYMT">
+                                <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WriteRange_11" SheetName="Visa DR Bill PYMT">
                                   <ui:WriteRange.DataTable>
                                     <InArgument x:TypeArguments="sd:DataTable">
                                       <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_974">visaDRBillPayment</mca:CSharpValue>
@@ -830,10 +829,10 @@
                                     </InArgument>
                                   </ui:WriteRange.WorkbookPath>
                                 </ui:WriteRange>
-                                <Sequence sap2010:Annotation.AnnotationText="The sum of Original Amount, Fee, Vat, Issuer Fee and Issuer Vat for Visa DR Sheet Bill PYMT Transaction Type" DisplayName="Sum Sequence" sap:VirtualizedContainerService.HintSize="304,1255" sap2010:WorkflowViewState.IdRef="Sequence_244">
+                                <Sequence sap2010:Annotation.AnnotationText="The sum of Original Amount, Fee, Vat, Issuer Fee and Issuer Vat for Visa DR Sheet Bill PYMT Transaction Type" DisplayName="Sum Sequence" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Sequence_244">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
@@ -1013,12 +1012,12 @@
                   </ui:CommentOut.Body>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
-                <Sequence DisplayName="Filter Visa DR by Transfer Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_259">
+                <Sequence DisplayName="Filter Visa DR by Transfer Sequence" sap:VirtualizedContainerService.HintSize="604,66" sap2010:WorkflowViewState.IdRef="Sequence_259">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1130,9 +1129,7 @@
                             <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_visaDRTransfer">
                               <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_665">visaDRTransfer</mca:CSharpReference>
                             </InOutArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Sheet">
-                              <Literal x:TypeArguments="x:String">visa</Literal>
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Sheet">visa</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1325,7 +1322,7 @@
                     </If.Else>
                   </If>
                 </Sequence>
-                <Sequence DisplayName="Filter Visa DR by Aitime top Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_262">
+                <Sequence DisplayName="Filter Visa DR by Aitime top Sequence" sap:VirtualizedContainerService.HintSize="604,66" sap2010:WorkflowViewState.IdRef="Sequence_262">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="visaDRAirtime" />
                   </Sequence.Variables>
@@ -1530,14 +1527,14 @@
             </If.Else>
           </If>
         </Sequence>
-        <Sequence DisplayName="Verve DR Sequence" sap:VirtualizedContainerService.HintSize="1035,431" sap2010:WorkflowViewState.IdRef="Sequence_291">
+        <Sequence DisplayName="Verve DR Sequence" sap:VirtualizedContainerService.HintSize="933,66" sap2010:WorkflowViewState.IdRef="Sequence_291">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="verveDRworkLogDT" />
             <Variable x:TypeArguments="x:Int32" Name="workLogRowCount" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -1623,29 +1620,29 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence DisplayName="Verve DR" sap:VirtualizedContainerService.HintSize="242,355" sap2010:WorkflowViewState.IdRef="Sequence_290">
+              <Sequence DisplayName="Verve DR" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_290">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_14">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,510" sap2010:WorkflowViewState.IdRef="CommentOut_14">
                   <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="284,464" sap2010:WorkflowViewState.IdRef="Sequence_362">
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="284,432" sap2010:WorkflowViewState.IdRef="Sequence_362">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Filter Verve DR by Bill payment Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_274">
+                      <Sequence DisplayName="Filter Verve DR by Bill payment Sequence" sap:VirtualizedContainerService.HintSize="242,340" sap2010:WorkflowViewState.IdRef="Sequence_274">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataTable" Name="visaDRBillPayment" />
                           <Variable x:TypeArguments="sd:DataTable" Name="verveDRBillPayment" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -1734,7 +1731,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence DisplayName="Treat Bill Payment" sap:VirtualizedContainerService.HintSize="284,595" sap2010:WorkflowViewState.IdRef="Sequence_273">
+                            <Sequence DisplayName="Treat Bill Payment" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_273">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:String" Name="billPaymentAcctNum" />
                                 <Variable x:TypeArguments="x:String" Name="billPaymentTransDate" />
@@ -1745,11 +1742,11 @@
                               </Sequence.Variables>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process Bill Payment Debit workflow" sap:VirtualizedContainerService.HintSize="242,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="PAYArena_Settlement\\Process Bill Payment Debit.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process Bill Payment Debit workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="PAYArena_Settlement\\Process Bill Payment Debit.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_DTBillPayment">
                                     <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_691">verveDRBillPayment</mca:CSharpReference>
@@ -1760,12 +1757,12 @@
                                 </ui:InvokeWorkflowFile.Arguments>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:InvokeWorkflowFile>
-                              <Sequence DisplayName="Get the total Sum" sap:VirtualizedContainerService.HintSize="242,412" sap2010:WorkflowViewState.IdRef="Sequence_272">
+                              <Sequence DisplayName="Get the total Sum" sap:VirtualizedContainerService.HintSize="379,412" sap2010:WorkflowViewState.IdRef="Sequence_272">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1986,12 +1983,12 @@
                   </ui:CommentOut.Body>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
-                <Sequence DisplayName="Filter Verve DR by Transfer Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_289">
+                <Sequence DisplayName="Filter Verve DR by Transfer Sequence" sap:VirtualizedContainerService.HintSize="436,66" sap2010:WorkflowViewState.IdRef="Sequence_289">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="verveDRTransfer" />
                   </Sequence.Variables>
@@ -2118,9 +2115,7 @@
                             <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_visaDRTransfer">
                               <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_689">verveDRTransfer</mca:CSharpReference>
                             </InOutArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Sheet">
-                              <Literal x:TypeArguments="x:String">verve</Literal>
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Sheet">verve</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2316,7 +2311,7 @@
                     </If.Else>
                   </If>
                 </Sequence>
-                <Sequence DisplayName="Filter Verve DR by Aitime topup Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_277">
+                <Sequence DisplayName="Filter Verve DR by Aitime topup Sequence" sap:VirtualizedContainerService.HintSize="436,66" sap2010:WorkflowViewState.IdRef="Sequence_277">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="visaDRAirtime" />
                     <Variable x:TypeArguments="sd:DataTable" Name="verveDRAirtime" />
@@ -2522,18 +2517,18 @@
             </If.Else>
           </If>
         </Sequence>
-        <Sequence DisplayName="Mastercard DR Sequence" sap:VirtualizedContainerService.HintSize="1035,2794" sap2010:WorkflowViewState.IdRef="Sequence_318">
+        <Sequence DisplayName="Mastercard DR Sequence" sap:VirtualizedContainerService.HintSize="933,66" sap2010:WorkflowViewState.IdRef="Sequence_318">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="mastercardDRworkLogDT" />
             <Variable x:TypeArguments="x:Int32" Name="workLogRowCount" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log: Filter" sap:VirtualizedContainerService.HintSize="993,51" sap2010:WorkflowViewState.IdRef="LogMessage_255" Level="Info">
+          <ui:LogMessage DisplayName="Log: Filter" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_255" Level="Info">
             <ui:LogMessage.Message>
               <InArgument x:TypeArguments="x:Object">
                 <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1144">"Bot is about to filter Mastercard DR"</mca:CSharpValue>
@@ -2546,7 +2541,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Work Log" sap:VirtualizedContainerService.HintSize="993,51" sap2010:WorkflowViewState.IdRef="ReadRange_12">
+          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Work Log" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ReadRange_12">
             <ui:ReadRange.DataTable>
               <OutArgument x:TypeArguments="sd:DataTable">
                 <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_597">mastercardDRworkLogDT</mca:CSharpReference>
@@ -2569,7 +2564,7 @@
               </InArgument>
             </ui:ReadRange.WorkbookPath>
           </ui:ReadRange>
-          <Sequence DisplayName="Log Row Count before Filter Sequence" sap:VirtualizedContainerService.HintSize="993,66" sap2010:WorkflowViewState.IdRef="Sequence_292">
+          <Sequence DisplayName="Log Row Count before Filter Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_292">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2602,7 +2597,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
           </Sequence>
-          <If DisplayName="If worklog count is greater than 0" sap:VirtualizedContainerService.HintSize="993,2414" sap2010:WorkflowViewState.IdRef="If_82">
+          <If DisplayName="If worklog count is greater than 0" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_82">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1149">workLogRowCount &gt; 0</mca:CSharpValue>
@@ -2610,21 +2605,21 @@
             </If.Condition>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence DisplayName="NMC DR" sap:VirtualizedContainerService.HintSize="748,2256" sap2010:WorkflowViewState.IdRef="Sequence_317">
+              <Sequence DisplayName="NMC DR" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_317">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="706,51" sap2010:WorkflowViewState.IdRef="CommentOut_15">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_15">
                   <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="284,464" sap2010:WorkflowViewState.IdRef="Sequence_363">
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_363">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2983,17 +2978,17 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
-                <Sequence DisplayName="Filter Mastercard DR by Transfer Sequence" sap:VirtualizedContainerService.HintSize="706,1967" sap2010:WorkflowViewState.IdRef="Sequence_313">
+                <Sequence DisplayName="Filter Mastercard DR by Transfer Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_313">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="mastercardDRTransfer" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:FilterDataTable DisplayName="Filter Mastercard DR Transfer Trans Type" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="664,51" sap2010:WorkflowViewState.IdRef="FilterDataTable_30" SelectColumnsMode="Keep">
+                  <ui:FilterDataTable DisplayName="Filter Mastercard DR Transfer Trans Type" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="FilterDataTable_30" SelectColumnsMode="Keep">
                     <ui:FilterDataTable.DataTable>
                       <InArgument x:TypeArguments="sd:DataTable">
                         <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1193">mastercardDRworkLogDT</mca:CSharpValue>
@@ -3032,7 +3027,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:FilterDataTable>
-                  <Sequence DisplayName="Log Row Count after Filter Sequence" sap:VirtualizedContainerService.HintSize="664,66" sap2010:WorkflowViewState.IdRef="Sequence_302">
+                  <Sequence DisplayName="Log Row Count after Filter Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_302">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3065,7 +3060,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
                   </Sequence>
-                  <If DisplayName="If worklog is greater than 0" sap:VirtualizedContainerService.HintSize="664,1678" sap2010:WorkflowViewState.IdRef="If_80">
+                  <If DisplayName="If worklog is greater than 0" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_80">
                     <If.Condition>
                       <InArgument x:TypeArguments="x:Boolean">
                         <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1198">workLogRowCount &gt; 0</mca:CSharpValue>
@@ -3073,12 +3068,12 @@
                     </If.Condition>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence DisplayName="Treat NMC Transfer" sap:VirtualizedContainerService.HintSize="419,1520" sap2010:WorkflowViewState.IdRef="Sequence_312">
+                      <Sequence DisplayName="Treat NMC Transfer" sap:VirtualizedContainerService.HintSize="242,594" sap2010:WorkflowViewState.IdRef="Sequence_312">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataRow" Name="merchantDatarow" />
                           <Variable x:TypeArguments="x:String" Name="switchValue" />
@@ -3092,7 +3087,7 @@
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="377,51" sap2010:WorkflowViewState.IdRef="LogMessage_273" Level="Info">
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_273" Level="Info">
                           <ui:LogMessage.Message>
                             <InArgument x:TypeArguments="x:Object">
                               <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1199">"Bot about to get the actual amount settled"</mca:CSharpValue>
@@ -3105,14 +3100,12 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:LogMessage>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process_Transfer_Debit " sap:VirtualizedContainerService.HintSize="377,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="PAYArena_Settlement\\Process_Transfer_Debit.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process_Transfer_Debit " sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="PAYArena_Settlement\\Process_Transfer_Debit.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_visaDRTransfer">
                               <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_692">mastercardDRTransfer</mca:CSharpReference>
                             </InOutArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Sheet">
-                              <Literal x:TypeArguments="x:String">mastercard</Literal>
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Sheet">mastercard</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -3121,7 +3114,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:InvokeWorkflowFile>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="377,51" sap2010:WorkflowViewState.IdRef="LogMessage_274" Level="Info">
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_274" Level="Info">
                           <ui:LogMessage.Message>
                             <InArgument x:TypeArguments="x:Object">
                               <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1220">"Bot about to create a sheet for: "+mastercardDRTransfer +" Mastercard DR Transfer in the work log"</mca:CSharpValue>
@@ -3134,7 +3127,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:LogMessage>
-                        <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="377,51" sap2010:WorkflowViewState.IdRef="WriteRange_16" SheetName="NMCDRTransfer">
+                        <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WriteRange_16" SheetName="NMCDRTransfer">
                           <ui:WriteRange.DataTable>
                             <InArgument x:TypeArguments="sd:DataTable">
                               <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1221">mastercardDRTransfer</mca:CSharpValue>
@@ -3152,10 +3145,10 @@
                             </InArgument>
                           </ui:WriteRange.WorkbookPath>
                         </ui:WriteRange>
-                        <Sequence sap2010:Annotation.AnnotationText="The sum of Original Amount, Fee, Vat, Issuer Fee and Issuer Vat for Master card DR Sheet Transfer Transaction Type" DisplayName="Sum Sequence" sap:VirtualizedContainerService.HintSize="377,1064" sap2010:WorkflowViewState.IdRef="Sequence_311">
+                        <Sequence sap2010:Annotation.AnnotationText="The sum of Original Amount, Fee, Vat, Issuer Fee and Issuer Vat for Master card DR Sheet Transfer Transaction Type" DisplayName="Sum Sequence" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Sequence_311">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
@@ -3305,7 +3298,7 @@
                     </If.Else>
                   </If>
                 </Sequence>
-                <Sequence DisplayName="Filter Mastercard DR by Airtime top Sequence" sap:VirtualizedContainerService.HintSize="706,66" sap2010:WorkflowViewState.IdRef="Sequence_316">
+                <Sequence DisplayName="Filter Mastercard DR by Airtime top Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_316">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="visaDRAirtime" />
                     <Variable x:TypeArguments="sd:DataTable" Name="mastercardDRAirtime" />
@@ -3401,14 +3394,14 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence DisplayName="Treat Airtime" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_315">
+                      <Sequence DisplayName="Treat Airtime" sap:VirtualizedContainerService.HintSize="473,345" sap2010:WorkflowViewState.IdRef="Sequence_315">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataRow" Name="merchantDatarow" />
                           <Variable x:TypeArguments="x:String" Name="switchValue" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -3511,7 +3504,7 @@
             </If.Else>
           </If>
         </Sequence>
-        <Sequence DisplayName="PayAttitude DR Sequence" sap:VirtualizedContainerService.HintSize="1035,66" sap2010:WorkflowViewState.IdRef="Sequence_357">
+        <Sequence DisplayName="PayAttitude DR Sequence" sap:VirtualizedContainerService.HintSize="933,66" sap2010:WorkflowViewState.IdRef="Sequence_357">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="payattitudeDRworkLogDT" />
             <Variable x:TypeArguments="x:Int32" Name="workLogRowCount" />
@@ -3535,7 +3528,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Work Log" sap:VirtualizedContainerService.HintSize="816,52" sap2010:WorkflowViewState.IdRef="ReadRange_13">
+          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Work Log" sap:VirtualizedContainerService.HintSize="816,51" sap2010:WorkflowViewState.IdRef="ReadRange_13">
             <ui:ReadRange.DataTable>
               <OutArgument x:TypeArguments="sd:DataTable">
                 <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_693">payattitudeDRworkLogDT</mca:CSharpReference>
@@ -3558,7 +3551,7 @@
               </InArgument>
             </ui:ReadRange.WorkbookPath>
           </ui:ReadRange>
-          <Sequence DisplayName="Log Row Count before Filter Sequence" sap:VirtualizedContainerService.HintSize="816,68" sap2010:WorkflowViewState.IdRef="Sequence_337">
+          <Sequence DisplayName="Log Row Count before Filter Sequence" sap:VirtualizedContainerService.HintSize="816,66" sap2010:WorkflowViewState.IdRef="Sequence_337">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -3591,7 +3584,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
           </Sequence>
-          <If DisplayName="If worklogRowCount is greater than 0" sap:VirtualizedContainerService.HintSize="816,1248" sap2010:WorkflowViewState.IdRef="If_91">
+          <If DisplayName="If worklogRowCount is greater than 0" sap:VirtualizedContainerService.HintSize="816,1245" sap2010:WorkflowViewState.IdRef="If_91">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1344">workLogRowCount &gt; 0</mca:CSharpValue>
@@ -3604,14 +3597,14 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence DisplayName="PayAttitude Masked Pan Sequence" sap:VirtualizedContainerService.HintSize="571,1088" sap2010:WorkflowViewState.IdRef="Sequence_378">
+              <Sequence DisplayName="PayAttitude Masked Pan Sequence" sap:VirtualizedContainerService.HintSize="571,1087" sap2010:WorkflowViewState.IdRef="Sequence_378">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:FilterDataTable DisplayName="Filter PayAttitudeDR by masked pan" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="529,52" sap2010:WorkflowViewState.IdRef="FilterDataTable_36" SelectColumnsMode="Keep">
+                <ui:FilterDataTable DisplayName="Filter PayAttitudeDR by masked pan" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="529,51" sap2010:WorkflowViewState.IdRef="FilterDataTable_36" SelectColumnsMode="Keep">
                   <ui:FilterDataTable.DataTable>
                     <InArgument x:TypeArguments="sd:DataTable">
                       <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1491">payattitudeDRworkLogDT</mca:CSharpValue>
@@ -4296,7 +4289,7 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_323" Level="Info">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_323" Level="Info">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1402">"No data found in Payattitude DR Sheet"</mca:CSharpValue>
@@ -4312,15 +4305,15 @@
             </If.Else>
           </If>
         </Sequence>
-        <ui:CommentOut DisplayName="Old PayAttitude DR" sap:VirtualizedContainerService.HintSize="1035,51" sap2010:WorkflowViewState.IdRef="CommentOut_20">
+        <ui:CommentOut DisplayName="Old PayAttitude DR" sap:VirtualizedContainerService.HintSize="933,51" sap2010:WorkflowViewState.IdRef="CommentOut_20">
           <ui:CommentOut.Body>
-            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="284,160" sap2010:WorkflowViewState.IdRef="Sequence_393">
+            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="284,555" sap2010:WorkflowViewState.IdRef="Sequence_393">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="PayAttitude DR Sequence" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_392">
+              <Sequence DisplayName="PayAttitude DR Sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_392">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="payattitudeDRworkLogDT" />
                   <Variable x:TypeArguments="x:Int32" Name="workLogRowCount" />
@@ -5143,18 +5136,18 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:CommentOut>
       </Sequence>
-      <Sequence DisplayName="Summary Sheet Sequence" sap:VirtualizedContainerService.HintSize="1077,66" sap2010:WorkflowViewState.IdRef="Sequence_153">
+      <Sequence DisplayName="Summary Sheet Sequence" sap:VirtualizedContainerService.HintSize="975,416" sap2010:WorkflowViewState.IdRef="Sequence_153">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="summaryDT" />
           <Variable x:TypeArguments="x:Double" Name="Test" />
         </Sequence.Variables>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_98" Level="Info">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_98" Level="Info">
           <ui:LogMessage.Message>
             <InArgument x:TypeArguments="x:Object">
               <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_602">"Read Payarena Summary Sheet"</mca:CSharpValue>
@@ -5167,7 +5160,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:LogMessage>
-        <ui:ReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_7" Range="A1:F5">
+        <ui:ReadRange AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ReadRange_7" Range="A1:F5">
           <ui:ReadRange.DataTable>
             <OutArgument x:TypeArguments="sd:DataTable">
               <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_266">summaryDT</mca:CSharpReference>
@@ -5180,7 +5173,7 @@
           </ui:ReadRange.SheetName>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -5190,7 +5183,7 @@
             </InArgument>
           </ui:ReadRange.WorkbookPath>
         </ui:ReadRange>
-        <ui:InvokeCode ContinueOnError="{x:Null}" Code="io_Amount = in_DT.AsEnumerable.&#xA;Where(Function(x) Double.TryParse(x(&quot;ISSUER NET POSITION&quot;).ToString, in_Test) = True).&#xA;Sum(Function(x) Convert.ToDecimal((x(&quot;ISSUER NET POSITION&quot;).ToString)))" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+        <ui:InvokeCode ContinueOnError="{x:Null}" Code="io_Amount = in_DT.AsEnumerable.&#xA;Where(Function(x) Double.TryParse(x(&quot;ISSUER NET POSITION&quot;).ToString, in_Test) = True).&#xA;Sum(Function(x) Convert.ToDecimal((x(&quot;ISSUER NET POSITION&quot;).ToString)))" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
           <ui:InvokeCode.Arguments>
             <InOutArgument x:TypeArguments="x:Double" x:Key="io_Amount">
               <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_652">out_summary</mca:CSharpReference>
@@ -5209,36 +5202,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:InvokeCode>
-        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_9">
-          <ui:CommentOut.Body>
-            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_320">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Assign out_summary" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_137">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:Double">
-                    <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_653">out_summary</mca:CSharpReference>
-                  </OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:Double">
-                    <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1250">Math.Abs(Convert.ToDouble(summaryDT.AsEnumerable().Where(x =&gt;Double.TryParse(x["SETTLEMENT DATE"].ToString(), out Test) == true).Sum(row =&gt; Convert.ToDouble(row["SETTLEMENT DATE".ToString()]))))</mca:CSharpValue>
-                  </InArgument>
-                </Assign.Value>
-              </Assign>
-            </Sequence>
-          </ui:CommentOut.Body>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </ui:CommentOut>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="LogMessage_110" Level="Info">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_110" Level="Info">
           <ui:LogMessage.Message>
             <InArgument x:TypeArguments="x:Object">
               <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_607">"Total sum for Summary sheet is: " + out_summary.ToString()</mca:CSharpValue>
@@ -5253,7 +5217,7 @@
         </ui:LogMessage>
       </Sequence>
     </Sequence>
-    <Sequence DisplayName="Payatitude CR Sequence" sap:VirtualizedContainerService.HintSize="1229,66" sap2010:WorkflowViewState.IdRef="Sequence_159">
+    <Sequence DisplayName="Payatitude CR Sequence" sap:VirtualizedContainerService.HintSize="1017,66" sap2010:WorkflowViewState.IdRef="Sequence_159">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="mastercardDRworkLogDT" />
         <Variable x:TypeArguments="x:Int32" Name="workLogRowCount" />
